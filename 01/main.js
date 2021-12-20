@@ -1,6 +1,6 @@
 var common = require('../common.js');
 
-async function main() {
+async function part1() {
     let inputArr = await common.importInputToArray('01/', 'input.txt');
     // convert array values to integers
     inputArr = inputArr.map((item) => {return parseInt(item)});
@@ -13,4 +13,22 @@ async function main() {
     console.log('answer', depthIncreaseCount)
 }
 
-main();
+async function part2() {
+    let inputArr = await common.importInputToArray('01/', 'input.txt');
+    // convert array values to integers
+    inputArr = inputArr.map((item) => {return parseInt(item)});
+
+    const parsedArr = [];
+    for (let i = 0; i < inputArr.length - 2; i++)
+        parsedArr.push(inputArr[i] + inputArr[i+1] + inputArr[i+2]);
+
+    let depthIncreaseCount = 0;
+    for (let i = 1; i < parsedArr.length; i++)
+        if (parsedArr[i] > parsedArr[i-1])
+            depthIncreaseCount ++;
+
+    console.log('answer', depthIncreaseCount);
+}
+
+part1();
+part2();

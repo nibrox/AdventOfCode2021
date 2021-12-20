@@ -4,6 +4,8 @@
     "readline": "^1.3.0"
   },
   "scripts": {
-    "01": "node 01/main.js"
+    "01": "node 01/main.js",
+    "02": "node 02/main.js",
+    "03": "node 03/main.js"
   }
 }
