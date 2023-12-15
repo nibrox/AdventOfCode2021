@@ -1,7 +1,7 @@
-var common = require('../common.js');
+var common = require('../../common/common.js');
 
 async function part1() {
-    let inputArr = await common.importInputToArray('02/', 'input.txt', ' ');
+    let inputArr = await common.importInputToArray('2021/02/', 'input.txt', ' ');
     // convert 2nd array values to integers
     inputArr = inputArr.map((item) => { return [ item[0], parseInt(item[1]) ] });
 
@@ -29,7 +29,7 @@ part1();
 
 
 async function part2() {
-    let inputArr = await common.importInputToArray('02/', 'input.txt', ' ');
+    let inputArr = await common.importInputToArray('2021/02/', 'input.txt', ' ');
     // convert 2nd array values to integers
     inputArr = inputArr.map((item) => { return [ item[0], parseInt(item[1]) ] });
 

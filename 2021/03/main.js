@@ -1,7 +1,7 @@
-var common = require('../common.js');
+var common = require('../../common/common.js');
 
 async function part1() {
-    let inputArr = await common.importInputToArray('03/', 'input.txt');
+    let inputArr = await common.importInputToArray('2021/03/', 'input.txt');
     // convert strings in array to single character array
     inputArr = inputArr.map(item => { return item.split(''); });
     // parse characters (bits) in the subarray to integers
@@ -28,7 +28,7 @@ part1();
 
 
 async function part2() {
-    let inputArr = await common.importInputToArray('03/', 'input.txt');
+    let inputArr = await common.importInputToArray('2021/03/', 'input.txt');
     // convert strings in array to single character array
     inputArr = inputArr.map(item => { return item.split(''); });
     // parse characters (bits) in the subarray to integers
