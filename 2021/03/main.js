@@ -34,7 +34,6 @@ async function part2() {
     // parse characters (bits) in the subarray to integers
     inputArr = inputArr.map(item => { return item.map(bit => { return parseInt(bit) } ); });
     
-    const inputLength = inputArr.length;
     const subArrLength = inputArr[0].length;
     // create copies of the input array to filter independently
     let filteredO2Rating = inputArr.map(item => { return item } );
@@ -50,8 +49,6 @@ async function part2() {
                 filteredO2Rating = filteredO2Rating.filter(item => item[i] === 0);
         }
         
-    }
-    for (let i = 0; i < subArrLength; i++) {
         if (filteredCO2Rating.length > 1) {
             const bitCount = filteredCO2Rating.map(item => item[i]).reduce((prev, next) => prev + next);
             
